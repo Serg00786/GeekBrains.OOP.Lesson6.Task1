@@ -45,5 +45,48 @@ namespace GeekBrains.OOP.Lesson2.Task1
         {
             return "Transferred succesfully";
         }
+
+        public static bool operator ==(BankBill b1, BankBill b2)
+        {
+            bool isb1null = ReferenceEquals(b1, null);
+            bool isb2null = ReferenceEquals(b2, null);
+
+            if(!isb1null && !isb2null && b1.Balance == b2.Balance)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+            
+        }
+
+        public static bool operator !=(BankBill b1, BankBill b2)
+        {
+            if (b1.Balance != b2.Balance)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+            
+        }
+
+        public override bool Equals(object obj)
+        {
+            return base.Equals(obj);
+        }
+
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
+        }
+        public override string ToString()
+        {
+            return "new result";
+        }
     }
 }
