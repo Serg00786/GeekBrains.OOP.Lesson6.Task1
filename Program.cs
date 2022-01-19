@@ -29,6 +29,16 @@ namespace GeekBrains.OOP.Lesson2.Task1
                 Console.WriteLine(result);
             }
 
+            BankBill bankbil2 = new BankBill();
+            bankbil2.Balance = 1111;
+           
+            
+
+            Console.WriteLine("BankBill.Equals(Bankbil2) = {0}", bankBill.Equals(bankbil2));
+            Console.WriteLine("Bankbill == BankBil2 = {0}", bankBill == bankbil2);
+            Console.WriteLine("BankBil != BankBil2 = {0}", bankBill != bankbil2);
+            Console.WriteLine(bankBill.Equals(bankbil2).ToString());
+
 
 
 
